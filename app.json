@@ -10,7 +10,7 @@
     "repository": "https://github.com/shubham-king/TGVideoStream",
   "website": "https://github.com/loverboyXD",
   "env": {
-    "APP_ID": {
+    "API_ID": {
     "description": "Your Api_id get from @Api_ScrapperRoBot or my.telegram.org",
     "value": "",
     "required": true
