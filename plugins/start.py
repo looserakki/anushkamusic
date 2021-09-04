@@ -11,7 +11,7 @@ from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup
 
 app = Client(SESSION_NAME, API_ID, API_HASH)
 group_call_factory = GroupCallFactory(app, GroupCallFactory.MTPROTO_CLIENT_TYPE.PYROGRAM)
-VIDEO_CALL = {}
+videocall = {}
 
 #pm message started
 
@@ -58,7 +58,7 @@ async def stream(client, m: Message):
             group_call = group_call_factory.get_file_group_call(f'vid-{chat_id}.raw')
             await group_call.start(chat_id)
             await group_call.set_video_capture(video)
-            VIDEO_CALL[chat_id] = group_call
+            videocall[chat_id] = group_call
             await msg.edit("**▶ 𝐒𝐭𝐫𝐞𝐚𝐦𝐢𝐧𝐠 𝐒𝐭𝐚𝐫𝐭𝐢𝐧𝐠..**")
         except Exception as e:
             await msg.edit(f"**𝐆𝐨𝐭 𝐅𝐮𝐜𝐤𝐞𝐝 𝐨𝐧𝐜𝐞 𝐦𝐨𝐫𝐞.** -- `{e}`")
@@ -69,7 +69,7 @@ async def stream(client, m: Message):
 async def stopvideo(client, m: Message):
     chat_id = m.chat.id
     try:
-        await VIDEO_CALL[chat_id].stop()
+        await videocall[chat_id].stop()
         await m.reply("**𝐒𝐭𝐨𝐩𝐞𝐝 𝐒𝐭𝐫𝐞𝐚𝐦𝐢𝐧𝐠**")
     except Exception as e:
         await m.reply(f"**𝐈 𝐚𝐦 𝐠𝐞𝐭𝐭𝐢𝐧𝐠 𝐅𝐮𝐜𝐤𝐞𝐝 # 𝐄𝐫𝐫𝐨𝐫** - `{e}`")
