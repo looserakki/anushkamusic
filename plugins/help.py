@@ -1,6 +1,7 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup 
 
+GOLDEN_CHANCE = "https://telegra.ph/file/6969f6dac0aa325b85745.jpg"
 
 @Client.on_message(filters.command("help"))
 async def help(client, m: Message):
