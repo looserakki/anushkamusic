@@ -37,12 +37,12 @@
   },
     "STREAM_URL": {
     "description": "Get StREAM URL",
-    "value": "",
+    "value": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
     "required": true
   },
       "SUDO_USERS": {
     "description": "SUDO USERS",
-    "value": "",
+    "value": "1856841927",
     "required": true
   }
  },
