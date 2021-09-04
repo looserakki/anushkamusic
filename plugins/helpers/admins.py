@@ -19,7 +19,7 @@ from typing import List
 
 from pyrogram.types import Chat
 
-from DaisyXMusic.function.admins import get as gett
+from plugins.casset.admins import get as gett
 from DaisyXMusic.function.admins import set
 
 
