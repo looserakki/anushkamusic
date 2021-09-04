@@ -9,7 +9,7 @@ async def start(client, m: Message):
                             reply_markup=InlineKeyboardMarkup(
                                 [[
                                      InlineKeyboardButton(
-                                            "𝐀𝐝𝐝 𝐦𝐞 ". url="t.me/{BOT_USERNAME}")
+                                            "𝐀𝐝𝐝 𝐦𝐞 ", url="t.me/{BOT_USERNAME}")
                                     ]],
                                  
                                     
