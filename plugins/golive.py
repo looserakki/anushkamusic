@@ -16,7 +16,7 @@ INPUT_SOURCE = '{STREAM_URL}'
 
 
 @Client.on_message(filters.command("golive"))
-async def main(client):
+async def golive(client):
     group_call = pytgcalls.GroupCallFactory(client).get_group_call()
     await group_call.join(chat_id)
     await group_call.start_video(INPUT_SOURCE)
@@ -24,7 +24,7 @@ async def main(client):
     await pyrogram.idle()
 
 
-if __name__ == '__main__':
+if __name__ == 'golive':
     pyro_client = pyrogram.Client('pytgcalls', API_ID, API_HASH)
     pyro_client.start()
 
