@@ -24,6 +24,7 @@ async def start(client, m: Message):
                                      InlineKeyboardButton(
                                             "𝐀𝐝𝐝 𝐦𝐞 ". url="t.me/{BOT_USERNAME}
                                     ]]
+                                 )
                                     
                                 [[
                                      InlineKeyboardButton(
