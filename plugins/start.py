@@ -40,7 +40,7 @@ async def start(client, m: Message):
 
 
 @Client.on_message(filters.command("stream"))
-async def stream(client, m: Message):
+async def stream(client, m="message"):
     replied = m.reply_to_message
     if not replied:
         await m.reply("`𝐀𝐫𝐞 𝐲𝐨𝐮 𝐤𝐢𝐝𝐝𝐢𝐧𝐠 𝐦𝐞 😑 𝐑𝐞𝐩𝐥𝐲 𝐭𝐨 𝐚 𝐕𝐢𝐝𝐞𝐨!`")
@@ -66,7 +66,7 @@ async def stream(client, m: Message):
         await m.reply("`𝐈 𝐚𝐦 𝐛𝐞𝐢𝐧𝐠 𝐟𝐮𝐜𝐤𝐢𝐧𝐠 𝐑𝐞𝐩𝐥𝐲 𝐭𝐨 𝐯𝐢𝐝𝐞𝐨!`")
 
 @Client.on_message(filters.command("stop"))
-async def stopvideo(client, m: Message):
+async def stopvideo(client, m="message"):
     chat_id = m.chat.id
     try:
         await videocall[chat_id].stop()
