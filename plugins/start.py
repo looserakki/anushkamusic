@@ -3,7 +3,7 @@ import asyncio
 from pytgcalls import GroupCallFactory
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from config import API_ID, API_HASH, SESSION_NAME, GOLDEN_CHAMCE, BOT_USERNAME
+from config import API_ID, API_HASH, SESSION_NAME, GOLDEN_CHANCE, BOT_USERNAME
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup 
 
