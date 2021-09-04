@@ -31,8 +31,7 @@ async def start(client, m: Message):
                                             "𝐒𝐮𝐩𝐩𝐨𝐫𝐭", url="t.me/RobotTech_Official")
                                     ]]
                             )
-   else:
-      await m.reply("**𝙏𝙂 𝙑𝙞𝙙𝙚𝙤 𝙎𝙩𝙧𝙚𝙖𝙢𝙞𝙣𝙜 𝙄𝙨 𝙡𝙞𝙫𝙚 ! ✨**")
+  
 
 #help menu started 
 
