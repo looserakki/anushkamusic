@@ -18,7 +18,7 @@
 from pyrogram import Client, filters
 from pyrogram.errors import UserAlreadyParticipant
 import asyncio
-from DaisyXMusic.helpers.decorators import authorized_users_only, errors
+from plugins.helpers.decorators import authorized_users_only, errors
 from plugins.king.callsmusic import client as USER
 from config import SUDO_USERS
 
