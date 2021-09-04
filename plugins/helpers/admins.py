@@ -19,8 +19,8 @@ from typing import List
 
 from pyrogram.types import Chat
 
-from plugins.cassate.admins import get as gett
-from plugins.cassate.admins import set
+from plugins.cessate.admins import get as gett
+from plugins.cessate.admins import set
 
 
 async def get_administrators(chat: Chat) -> List[int]:
