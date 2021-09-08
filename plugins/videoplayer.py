@@ -36,7 +36,7 @@ async def stream(client, m: Message):
             chat_id = m.chat.id
             process = raw_converter(livelink, f'audio{chat_id}.raw', f'video{chat_id}.raw')
             FFMPEG_PROCESSES[chat_id] = process
-            msg = await m.reply("`Starting Live Stream...`")
+            msg = await m.reply("`Starting Live Stream ...`*Powered By PY-TGCALLS*")
             await asyncio.sleep(10)
             try:
                 audio_file = f'audio{chat_id}.raw'
@@ -62,7 +62,7 @@ async def stream(client, m: Message):
                     ),
                     stream_type=StreamType().local_stream,
                 )
-                await msg.edit("**Started Streaming!**")
+                await msg.edit("**Started Streaming!**\n *@XD_MUSIXBOT*")
                 await idle()
             except Exception as e:
                 await msg.edit(f"**Error** -- `{e}`")
