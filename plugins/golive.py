@@ -3,7 +3,7 @@ import asyncio
 import pytgcalls
 import pyrogram
 from pyrogram import Client, filters
-from config import API_ID, API_HASH, STREAM_URL
+from config import API_ID, API_HASH, STREAM_URL, CHAT_ID
 
 
 API_ID = 'API_ID'
@@ -11,6 +11,7 @@ API_HASH = 'API_HASH'
 
 INPUT_SOURCE = '{STREAM_URL}'
 
+CHAT_ID = 'CHAT_ID'
 
 
 
@@ -18,7 +19,7 @@ INPUT_SOURCE = '{STREAM_URL}'
 @Client.on_message(filters.command("golive"))
 async def golive(client):
     group_call = pytgcalls.GroupCallFactory(client).get_group_call()
-    await group_call.join(chat_id)
+    await group_call.join(CHAT_ID)
     await group_call.start_video(INPUT_SOURCE)
 
     await pyrogram.idle()
