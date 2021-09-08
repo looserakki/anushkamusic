@@ -1,6 +1,4 @@
 TgCrypto 
-py-tgcalls
-
 ffmpeg-python
 
 git+https://github.com/pyrogram/pyrogram@master
