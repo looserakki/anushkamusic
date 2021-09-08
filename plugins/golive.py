@@ -16,7 +16,8 @@ CHAT_ID = 'CHAT_ID'
 
 
 
-async def main(client):
+@Client.on_message(filters.command("golive"))
+   async def main(client):
     group_call = pytgcalls.GroupCallFactory(client).get_group_call()
     await group_call.join(CHAT_ID)
     await group_call.start_video(INPUT_SOURCE)
